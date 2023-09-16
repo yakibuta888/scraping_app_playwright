@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: app-$PROJECT_NAME
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+      args:
+        - WORKDIR=$WORK_DIR
+        - USERNAME=$USER_NAME
+        - HOMEDIR=$HOME_DIR
+        - USERID=$USER_ID
+        - GROUPID=$GROUP_ID
+    ports:
+      - $IP:$BACKEND_PORT:$BACKEND_PORT
+    tty: true
+    env_file:
+      - ./.env
+      - ./app/app.env
+    volumes:
+      - logs:$WORK_DIR/logs
+      - ./app:$WORK_DIR:ro
+      - $WORK_DIR/node_modules
+
+volumes:
+  logs:

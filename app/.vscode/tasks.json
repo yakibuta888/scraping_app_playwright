@@ -1,0 +1,19 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "dev:debug",
+			"problemMatcher": [],
+			"label": "npm: dev:debug",
+			"detail": "npm run build:watch & npm run start:debug"
+		},
+		{
+			"type": "npm",
+			"script": "dev",
+			"problemMatcher": [],
+			"label": "npm: dev",
+			"detail": "npm run build:watch & npm run start"
+		}
+	]
+}
