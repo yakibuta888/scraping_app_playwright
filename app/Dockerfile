@@ -1,6 +1,9 @@
 # syntax=docker/dockerfile:1.4.1
 FROM node:16.20-bullseye
 
+ENV DISPLAY=:1
+ENV DEBIAN_FRONTEND=noninteractive
+
 RUN apt-get update \
 	&& apt-get install -y --no-install-recommends \
 	apt-utils \

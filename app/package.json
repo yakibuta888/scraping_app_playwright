@@ -4,8 +4,10 @@
   "description": "",
   "main": "main.mjs",
   "scripts": {
+    "test": ". '/home/client/app/test.sh'",
     "postinstall": "npx playwright install",
-    "vnc": "xvfb-run node main.mjs"
+    "vnc": "source '/home/client/app/vnc-setting.sh'",
+    "start": "xvfb-run node main.mjs"
   },
   "author": "Masanori Hoshina",
   "license": "MIT",

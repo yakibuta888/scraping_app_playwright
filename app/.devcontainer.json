@@ -78,5 +78,5 @@
   "features": {
     "ghcr.io/devcontainers/features/common-utils:2": {}
   },
-  "postStartCommand": ""
+  "postStartCommand": "bash \"$HOME/app/vnc-setting.sh\""
 }

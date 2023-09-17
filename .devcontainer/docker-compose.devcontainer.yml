@@ -3,7 +3,7 @@ version: '3.8'
 services:
   app:
     build:
-      shm_size: 512m
+      shm_size: 1gb
     volumes:
       - ./app:$WORK_DIR:cached
       - vscode-extension-volume:$HOME_DIR/.vscode-server/extensions
